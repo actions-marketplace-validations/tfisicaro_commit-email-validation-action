@@ -1,5 +1,7 @@
 name: "Validate git author email"
-description: "Validate that all commits in a pull request match the specified pattern."
+description: "Validate that the git author email is in the list of allowed domains."
+icon: "check"
+color: "green"
 author: "Tim Fisicaro"
 
 inputs:

@@ -1,6 +1,6 @@
 # Validate git author email
 
-This action validates that the git author email is in the list of allowd domains.
+This action validates that the git author email is in the list of allowed domains.
 
 ## Inputs
 
