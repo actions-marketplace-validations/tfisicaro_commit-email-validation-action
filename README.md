@@ -16,6 +16,9 @@ The output of the pattern matching the author emails.
 
 ## Example usage
 
-uses: actions/commit-email-validation-action@v1
+```yaml
+uses: tfisicaro/commit-email-validation-action@v1
 with:
-domains: 'microsoft.com;github.com'
+  domains: 'microsoft.com;github.com'
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
