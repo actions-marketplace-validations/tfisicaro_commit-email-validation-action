@@ -1,0 +1,22 @@
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: Validate git author email
+    steps:
+      - name: Checkout Git repository
+        id: getgit
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Validate author email
+        id: pt
+        uses: ./
+        with:
+          domains: "xenial.cloud;tfisicaro.dev"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

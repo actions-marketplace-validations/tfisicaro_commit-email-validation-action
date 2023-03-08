@@ -1,0 +1,19 @@
+name: "Validate git author email"
+description: "Validate that all commits in a pull request match the specified pattern."
+author: "Tim Fisicaro"
+
+inputs:
+  GITHUB_TOKEN:
+    description: "GitHub token"
+    required: true
+  domains:
+    description: "The domains that the git author email must match separated by a semicolon."
+    required: true
+
+outputs:
+  valid:
+    description: "Bool, true if all commits have been made with a domain specified in the domains input."
+
+runs:
+  using: "node16"
+  main: "dist/index.js"

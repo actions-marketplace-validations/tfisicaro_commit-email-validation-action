@@ -1,0 +1,23 @@
+{
+  "name": "@tfisicaro/commit-email-validation-action",
+  "version": "1.0.0",
+  "description": "Block pushes with a commit author email that does not match the domains specified.",
+  "main": "index.js",
+  "scripts": {
+    "build": "ncc build src/action.js -o dist --license licenses.txt"
+  },
+  "keywords": [
+    "git",
+    "commit",
+    "author",
+    "email",
+    "validation"
+  ],
+  "author": "Tim Fisicaro <tim.fisicaro@xenial.cloud> (https://tfisicaro.dev)",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1",
+    "@vercel/ncc": "^0.33.4"
+  }
+}
